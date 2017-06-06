@@ -1,1 +1,1 @@
-# Daily-Bugle-Scraper
+# Homework-Daily-Bugle-Scraper
