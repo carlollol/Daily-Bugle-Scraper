@@ -1,7 +1,7 @@
 # Homework-Daily-Bugle-Scraper
 
 ## Live Link 
-- https://la-times-scraper.herokuapp.com/
+- https://dailybuglescraper.herokuapp.com/
 
 ## Description
 - Press the scrape article button and you'll get articles from Reddit. You can also choose to save articles and add notes to saved articles. These notes can also be deleted.
@@ -19,4 +19,6 @@
 - request
 
 ## Code Explaination
-- In Progress...
+- We used cheerio to scrape the data on the selected site.
+- We then use mongoose to store it on our database which we can then access and display on our application.
+- You can add notes on the selected articles and save it for later view
