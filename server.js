@@ -12,8 +12,6 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
-var PORT = process.env.PORT || 3000;
-
 // Initialize Express
 var app = express();
 
@@ -27,8 +25,10 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-var uri = "mongodb://heroku_btj1d3bj:g67hdfc5qfu3hb0p3tq3iovblt@ds131742.mlab.com:31742/heroku_btj1d3bj";
-mongoose.connect("mongodb://localhost/articles");
+//Set up default mongoose connection
+var configDB = require('./config/database');
+mongoose.connect(configDB.url);
+// mongoose.connect("mongodb://localhost/articles");
 var db = mongoose.connection;
 
 // Show any mongoose errors
